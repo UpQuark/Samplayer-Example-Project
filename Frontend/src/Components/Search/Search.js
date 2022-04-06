@@ -1,15 +1,40 @@
-import React, { useState } from 'react'
-import SearchBar           from "./SearchBar";
+import React, { useState }  from 'react';
+import { Col, Row }         from "react-bootstrap";
+import { useOutletContext } from "react-router-dom";
+import SearchBar            from "./SearchBar";
+import SearchResult         from "./SearchResult";
+import PlayBar              from "../PlayBar";
 
 export default function Search() {
-
   let [searchResults, setSearchResults] = useState({});
+  const [searchString, setSearchString] = useState("");
+  const [playingTrackUrl, setPlayingTrackUrl] = useOutletContext();
+
+
+  let results = ""
+  if ( searchResults.results && searchResults.results.length ) {
+    results = searchResults.results.map(( result, key ) => {
+      return <SearchResult
+        searchResult={result}
+        setPlayingTrackUrl={setPlayingTrackUrl}
+        key={key}/>
+    })
+  }
 
   return (
-    <div className={"row my-3"}>
-      <div className={"col"}>
-        <SearchBar searchResults={searchResults} setSearchResults={setSearchResults}/>
-      </div>
-    </div>
+    <>
+      <Row className={"row mb-2"}>
+        <Col md={6}>
+          <h1>Search</h1>
+          <SearchBar searchResults={searchResults} setSearchResults={setSearchResults}/>
+        </Col>
+        <Col md={6} className={"mt-2"}>
+          {results ?
+            results :
+            <span className="text-muted">No results yet</span>
+          }
+        </Col>
+      </Row>
+    </>
   )
 }

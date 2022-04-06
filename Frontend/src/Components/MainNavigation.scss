@@ -1,5 +1,8 @@
 .main-navigation {
   box-shadow: 0 5px 5px #ddd;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 
   a {
     color: black;
