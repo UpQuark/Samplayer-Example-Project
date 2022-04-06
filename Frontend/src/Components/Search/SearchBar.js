@@ -12,6 +12,7 @@ import { DebounceInput }   from "react-debounce-input";
 export default function SearchBar( props ) {
   const [searchString, setSearchString] = useState("");
 
+
   async function searchItunesApi( event ) {
     setSearchString(event.target.value);
 
@@ -31,18 +32,14 @@ export default function SearchBar( props ) {
     }
   }
 
-
   return (
-    <>
-      <DebounceInput
-        className="form-control p-2"
-        placeholder={"Search albums, tracks or artists"}
-        minLength={2}
-        debounceTimeout={300}
-        value={searchString}
-        onChange={searchItunesApi}
-      />
-    </>
+    <DebounceInput
+      className="form-control p-2"
+      placeholder={"Search albums, tracks or artists"}
+      minLength={2}
+      debounceTimeout={200}
+      value={searchString}
+      onChange={searchItunesApi}
+    />
   )
-
 }

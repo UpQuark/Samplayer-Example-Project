@@ -20,6 +20,7 @@ export default function Search() {
     results = searchResults.results.map(( result, key ) => {
       return <SearchResult
         searchResult={result}
+        playingTrackUrl={playingTrackUrl}
         setPlayingTrackUrl={setPlayingTrackUrl}
         key={key}/>
     })

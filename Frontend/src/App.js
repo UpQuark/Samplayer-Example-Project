@@ -1,4 +1,4 @@
-import './App.scss';
+import './Styles/App.scss';
 import { Routes, Route } from "react-router-dom";
 
 import MainNavigation from 'Components/MainNavigation';

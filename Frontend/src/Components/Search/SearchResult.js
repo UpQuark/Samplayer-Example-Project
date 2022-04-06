@@ -1,11 +1,12 @@
-import React        from 'react'
-import { Col, Row } from "react-bootstrap";
-import * as Icons   from 'react-feather'
+import React, { useEffect, useState } from 'react'
+import { Col, Row }                   from "react-bootstrap";
+import * as Icons                     from 'react-feather'
 
 /**
  *
  * @param props
  * @param props.searchResult
+ * @param props.playingTrackUrl
  * @param props.setPlayingTrackUrl
  * SearchResults have variable schemas defined
  * e.g.
@@ -46,13 +47,25 @@ import * as Icons   from 'react-feather'
  * @constructor
  */
 export default function SearchResult( props ) {
+  const [isPlaying, setIsPlaying] = useState(false)
 
-  function playSong(){
-    console.debug("Song played")
-    props.setPlayingTrackUrl(props.searchResult.previewUrl);
+  useEffect(() => {
+      setIsPlaying(props.searchResult.previewUrl === props.playingTrackUrl)
+    },
+    [props.playingTrackUrl]
+  )
+
+  function toggleSong() {
+    if (isPlaying){
+      props.setPlayingTrackUrl("");
+    } else {
+      props.setPlayingTrackUrl(props.searchResult.previewUrl);
+    }
+
+    // isPlaying = !isPlaying;
   }
 
-  function addToPlaylist(){
+  function addToPlaylist() {
     console.debug("Song added to playlist")
   }
 
@@ -60,15 +73,23 @@ export default function SearchResult( props ) {
 
     <div className={"card card-body my-2 text-start"}>
       <Row>
-        <Col xs={3} className={"p-1"} onClick={playSong}>
+        <Col xs={3} className={"p-1"} onClick={toggleSong}>
           <Row>
             <Col xs={12}>
               <img src={props.searchResult.artworkUrl60} alt={`Album artwork for props.searchResult.collectionName`}/>
             </Col>
             <Col xs={12}>
-              <button className={"btn btn-outline-secondary my-1 p-1 border-0"} style={{ fontSize: "0.7rem" }}>
-                <Icons.PlayCircle/> Play
-              </button>
+              {!isPlaying &&
+                <button className={"btn btn-outline-secondary my-1 p-1 border-0"} style={{ fontSize: "0.7rem" }}>
+                  <Icons.PlayCircle/> Play
+                </button>
+              }
+              {isPlaying &&
+                <button className={"btn btn-outline-secondary my-1 p-1 border-0"} style={{ fontSize: "0.7rem" }}>
+                  <Icons.StopCircle/> Stop
+                </button>
+              }
+
             </Col>
           </Row>
         </Col>

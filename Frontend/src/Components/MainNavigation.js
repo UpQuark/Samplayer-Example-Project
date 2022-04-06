@@ -1,9 +1,14 @@
 import React                                   from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import * as Icons                              from "react-feather";
 import "./MainNavigation.scss";
 import { Link }                                from "react-router-dom";
 
+/**
+ * Core nav element
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function MainNavigation() {
   return (
     <Navbar bg="light" fixed="top" className={"main-navigation mb-3"} expand="lg">

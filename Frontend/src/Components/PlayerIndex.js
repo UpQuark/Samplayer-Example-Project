@@ -14,7 +14,11 @@ export default function PlayerIndex() {
   return (
     <>
       <Outlet context={[playingTrackUrl, setPlayingTrackUrl]}/>
-      {playingTrackUrl && <PlayBar trackUrl={playingTrackUrl}/>}
+      {playingTrackUrl &&
+        <PlayBar
+          playingTrackUrl={playingTrackUrl}
+          setPlayingTrackUrl={setPlayingTrackUrl}
+        />}
     </>
 
   )
