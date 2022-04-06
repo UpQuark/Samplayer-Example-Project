@@ -1,16 +1,17 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import { Routes, Route } from "react-router-dom";
 
-import Home from 'Components/Home'
+import Home           from 'Components/Home';
+import MainNavigation from 'Components/MainNavigation';
 
 function App() {
   return (
     <div className="App">
-      <div className="page-container">
+      <MainNavigation/>
+      <div className="container-fluid">
         <Routes>
-          <Route path="" element={Home}/>
-
+          <Route path="" element={<Home/>}/>
         </Routes>
       </div>
 
