@@ -1,0 +1,13 @@
+{
+  "name": "Pollie Music Player API",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node ./start.js"
+  },
+  "dependencies": {
+    "express": "~4.16.1",
+    "morgan": "~1.9.1"
+  }
+}
