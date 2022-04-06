@@ -1,9 +1,10 @@
-import logo from './logo.svg';
 import './App.scss';
 import { Routes, Route } from "react-router-dom";
 
-import Home           from 'Components/Home';
 import MainNavigation from 'Components/MainNavigation';
+import Home           from 'Components/Home';
+import Search         from "Components/Search/Search";
+import Playlists      from "Components/Playlists/Playlists";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <div className="container-fluid">
         <Routes>
           <Route path="" element={<Home/>}/>
+          <Route path="search" element={<Search/>}/>
+          <Route path="playlists" element={<Playlists/>}/>
         </Routes>
       </div>
 
