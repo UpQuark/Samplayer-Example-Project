@@ -3,14 +3,18 @@ import { Col, Row }         from "react-bootstrap";
 import { useOutletContext } from "react-router-dom";
 import SearchBar            from "./SearchBar";
 import SearchResult         from "./SearchResult";
-import PlayBar              from "../PlayBar";
 
+/**
+ * Root search route, managing searching iTunes tracks and the display of existing searches
+ * Notes:
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function Search() {
   let [searchResults, setSearchResults] = useState({});
-  const [searchString, setSearchString] = useState("");
   const [playingTrackUrl, setPlayingTrackUrl] = useOutletContext();
 
-
+  // Build list of results if response data from iTunes is present
   let results = ""
   if ( searchResults.results && searchResults.results.length ) {
     results = searchResults.results.map(( result, key ) => {

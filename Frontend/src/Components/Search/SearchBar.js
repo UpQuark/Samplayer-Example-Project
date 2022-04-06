@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { useQuery }        from "react-query";
-import debounce            from 'lodash.debounce';
+import { DebounceInput }   from "react-debounce-input";
 
 /**
- *
+ * Searchbar for accepting search terms and sending them to iTunes API
  * @param props
  * @param props.searchResults
  * @param props.setSearchResults
@@ -22,27 +21,24 @@ export default function SearchBar( props ) {
       return;
     }
 
-    const query = debounce(async () => {
-      try {
-        const response = await fetch(`https://itunes.apple.com/search?parameterkeyvalue&term=${searchString}`);
-        props.setSearchResults(await response.json());
-      } catch ( e ) {
-        // In the real world, you may want to persist this to a telemetry service and handle 404s before it
-        console.debug(JSON.stringify(e));
-        props.setSearchResults({});
-      }
-
-    }, 100)
-    query();
-
+    try {
+      const response = await fetch(`https://itunes.apple.com/search?term=${event.target.value}&entity=song`);
+      props.setSearchResults(await response.json());
+    } catch ( e ) {
+      // In the real world, you may want to persist this to a telemetry service and handle 404s before it
+      console.debug(JSON.stringify(e));
+      props.setSearchResults({});
+    }
   }
+
 
   return (
     <>
-      <input
+      <DebounceInput
         className="form-control p-2"
-        type="text"
         placeholder={"Search albums, tracks or artists"}
+        minLength={2}
+        debounceTimeout={300}
         value={searchString}
         onChange={searchItunesApi}
       />
