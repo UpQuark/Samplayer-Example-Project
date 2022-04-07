@@ -24,7 +24,7 @@ export default function PlayBar(props) {
       src={props.playingTrackUrl}
       customAdditionalControls={[
         <button className={"btn text-muted"} onClick={stopSong}>
-          <Icons.StopCircle style={{height: "34px", width: "34px"}}/>
+          <Icons.StopCircle title="A stop button for stopping music" style={{height: "34px", width: "34px"}}/>
         </button>
       ]}
     />

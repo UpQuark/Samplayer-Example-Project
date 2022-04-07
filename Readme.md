@@ -23,6 +23,17 @@ playlists. It can also be started with `npm install` followed by `npm start`.
 * As a user, I can search for an Artist, Song ~~or Playlist~~ and it will appear in a list of results
 * As a user, I can play a song from the results list
 
+SamPlayer offers a mobile and desktop responsive music search and play experience, allowing you
+to search by song, artist, album, genre or other keyword, see the top 50 results, and play a 30s sample for each.
+
+This sample can be paused and stopped, but otherwise won't close when you leave the player page, allowing you to
+take your 30-second groove to other pages.
+
+SamPlayer uses [React Router 6](https://reactrouter.com/docs/en/v6/getting-started/overview) so refreshing a page
+won't send you back home (but will reset your search).
+
+SamPlayer is keyboard navigable and uses standard a11y practices like providing textual indicators of status
+
 ![Music Player at desktop resolution](Frontend/public/examples/MusicDesktop.png)
 ![Home at desktop resolution](Frontend/public/examples/MusicMobile.png)
 

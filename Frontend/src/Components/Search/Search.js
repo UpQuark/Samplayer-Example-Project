@@ -34,10 +34,12 @@ export default function Search() {
           <SearchBar searchResults={searchResults} setSearchResults={setSearchResults}/>
         </Col>
         <Col md={6} className={"mt-2"}>
-          {results ?
-            results :
-            <span className="text-muted">No results yet</span>
-          }
+          <section>
+            {results ?
+              results :
+              <span className="text-muted">No results yet</span>
+            }
+          </section>
         </Col>
       </Row>
     </>

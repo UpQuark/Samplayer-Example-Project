@@ -15,11 +15,13 @@ export default function PlayerIndex() {
     <>
       <Outlet context={[playingTrackUrl, setPlayingTrackUrl]}/>
       {playingTrackUrl &&
-        <PlayBar
-          playingTrackUrl={playingTrackUrl}
-          setPlayingTrackUrl={setPlayingTrackUrl}
-        />}
+        <section>
+          <PlayBar
+            playingTrackUrl={playingTrackUrl}
+            setPlayingTrackUrl={setPlayingTrackUrl}
+          />
+        </section>
+        }
     </>
-
   )
 }

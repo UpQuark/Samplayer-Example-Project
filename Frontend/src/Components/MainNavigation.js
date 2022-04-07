@@ -14,7 +14,7 @@ export default function MainNavigation() {
     <Navbar bg="light" fixed="top" className={"main-navigation mb-3"} expand="lg">
       <Container>
         <Navbar.Brand href="/" className={"text-primary me-5"}>
-          <Icons.Music className={"me-2"}/>
+          <Icons.Music title="A musical note and Samplayer's logo" className={"me-2"}/>
           <span>
             SamPlayer
           </span>
