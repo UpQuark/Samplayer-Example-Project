@@ -54,7 +54,7 @@ export default function SearchResultCard( props ) {
   useEffect(() => {
       setIsPlaying(props.searchResult.previewUrl === props.playingTrackUrl)
     },
-    [props.playingTrackUrl]
+    [props.playingTrackUrl, props.searchResult.previewUrl]
   )
 
   function toggleSong() {
