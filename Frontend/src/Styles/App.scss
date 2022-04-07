@@ -1,6 +1,17 @@
 @import "bootstrap";
 @import "Links";
 
+// Bootstrap theme overrides
+$theme-colors: (
+        "primary": #0244a1,
+        "secondary": $secondary,
+        "dark": $dark,
+        "light": $light,
+        "info": $info,
+        "danger": $danger,
+        "success": $success
+);
+
 .App {
   text-align: center;
 }
