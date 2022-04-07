@@ -1,8 +1,10 @@
-import { Router as IndexRoute } from 'express';
+import { Router as expressRouter } from 'express';
 
-/* GET health-check index route. */
-IndexRoute.get('/', function ( req, res, next ) {
-  res.render('index', { title: 'Index' });
+const indexRoute = expressRouter()
+
+/* GET home page. */
+indexRoute.get('/', function ( req, res, next ) {
+  res.render('index', { title: 'Express' });
 });
 
-export default IndexRoute;
+export default indexRoute;

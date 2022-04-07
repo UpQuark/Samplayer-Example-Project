@@ -5,10 +5,15 @@ export default class dataStore {
   static _store = {}
 
   static write( { name, key, value } ) {
+    if (!key) {
+      // Assign a unique ID. In a real-world data store, this could be done at a database level with either sequential
+      // IDs on insert or UUIDs.
+      key = crypto.randomUUID()
+    }
     dataStore._store[name][key] = value;
   }
 
-  static read( { name, key } = {} ) {
+  static read( { name, key = null } = {} ) {
     if ( key )
       return dataStore._store[name][key]
     else
