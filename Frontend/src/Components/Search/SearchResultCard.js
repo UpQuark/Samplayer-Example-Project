@@ -3,12 +3,13 @@ import { Col, Row }                   from "react-bootstrap";
 import * as Icons                     from 'react-feather'
 
 /**
- *
  * @param props
- * @param props.searchResult
- * @param props.playingTrackUrl
- * @param props.setPlayingTrackUrl
- * SearchResults have variable schemas defined
+ * @param props.playingTrackUrl {String} - URL of track that is currently playing, overridable by search results of
+ * other tracks.
+ * @param props.setPlayingTrackUrl {Function} - Setter for playingTrackUrl
+ * @param props.searchResult {Object} - Single SearchResultCard returned from iTunes search API. SearchResults have variable
+ * schemas depending on if a result is a song, movie, podcast, etc. This Component focuses on songs results so should
+ * consistently be dealing with the below schema:
  * e.g.
  * {
  *  artistId: 1137916541
@@ -46,7 +47,7 @@ import * as Icons                     from 'react-feather'
  * @returns {JSX.Element}
  * @constructor
  */
-export default function SearchResult( props ) {
+export default function SearchResultCard( props ) {
   const [isPlaying, setIsPlaying] = useState(false)
 
   useEffect(() => {
@@ -56,7 +57,7 @@ export default function SearchResult( props ) {
   )
 
   function toggleSong() {
-    if (isPlaying){
+    if ( isPlaying ) {
       props.setPlayingTrackUrl("");
     } else {
       props.setPlayingTrackUrl(props.searchResult.previewUrl);

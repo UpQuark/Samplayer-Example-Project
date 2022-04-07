@@ -1,8 +1,8 @@
 import React, { useState }  from 'react';
 import { Col, Row }         from "react-bootstrap";
 import { useOutletContext } from "react-router-dom";
-import SearchBar            from "./SearchBar";
-import SearchResult         from "./SearchResult";
+import SearchBar        from "./SearchBar";
+import SearchResultCard from "./SearchResultCard";
 
 /**
  * Root search route, managing searching iTunes tracks and the display of existing searches
@@ -18,7 +18,7 @@ export default function Search() {
   let results = ""
   if ( searchResults.results && searchResults.results.length ) {
     results = searchResults.results.map(( result, key ) => {
-      return <SearchResult
+      return <SearchResultCard
         searchResult={result}
         playingTrackUrl={playingTrackUrl}
         setPlayingTrackUrl={setPlayingTrackUrl}

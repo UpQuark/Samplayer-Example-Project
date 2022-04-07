@@ -2,16 +2,17 @@ import React, { useState } from 'react';
 import { DebounceInput }   from "react-debounce-input";
 
 /**
- * Searchbar for accepting search terms and sending them to iTunes API
+ * Searchbar for accepting search terms and sending them to iTunes API. Debounces input to prevent an HTTP request for
+ * every keystroke.
  * @param props
- * @param props.searchResults
- * @param props.setSearchResults
+ * @param props.searchResults {Array} - A list of SearchResults retrieved from the iTunes search API. See
+ * https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api for response formats.
+ * @param props.setSearchResults {Function} - Setter for searchResults
  * @returns {JSX.Element}
  * @constructor
  */
 export default function SearchBar( props ) {
   const [searchString, setSearchString] = useState("");
-
 
   async function searchItunesApi( event ) {
     setSearchString(event.target.value);
