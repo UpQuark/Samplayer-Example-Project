@@ -21,6 +21,9 @@ playlists. It can also be started with `npm install` followed by `npm start`.
 This project deploys with basic Azure-template GitHub Actions to a [static host](https://purple-sand-0aaf61b0f.1.azurestaticapps.net/)
 on each commit.
 
+### 🚨 API Note for static host
+I've noticed some odd behavior from the search results API relating to [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) where search terms I previously searched when running the App locally at `localhost:3000` (e.g. "example1") continue to respond to web requests *of the same term* with the allowed-origin header `localhost:3000`, causing a CORS error and no results. This is likely due to Apple cacheing responses by requesting IP address. This may happen to you if you attempt to run the app locally, and then search the same terms on the above-linked static site.
+
 ## Features
 
 ### Complete
