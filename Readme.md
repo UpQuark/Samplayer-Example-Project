@@ -18,12 +18,18 @@ The API is not used by the Frontend and just exists as a basic example of a mock
 playlists. It can also be started with `npm install` followed by `npm start`.
 
 ##Features
-As a user, I can search for an Artist, Song or Playlist and appear it will appear in a list
-of results
-● As a user, I can play a song from the results list
-● As a user, I can create and save a playlist
-● As a user, I can add and remove pieces from the playlist
-● As a user, I can play a piece of music from the playlist
+
+### Complete
+* As a user, I can search for an Artist, Song ~~or Playlist~~ and it will appear in a list of results
+* As a user, I can play a song from the results list
+
+![Music Player at desktop resolution](Frontend/public/examples/MusicDesktop.png | width=400)
+![Home at desktop resolution](Frontend/public/examples/MusicMobile.png | width=400)
+
+### Incomplete
+* As a user, I can create and save a playlist
+* As a user, I can add and remove pieces from the playlist
+* As a user, I can play a piece of music from the playlist
 
 ##Core Libraries Used
 
