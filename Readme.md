@@ -8,7 +8,7 @@ and play 30 second audio samples available free.
 
 This project was timeboxed to about ~7 hours total work from `git init` onward.
 
-##Getting Started
+## Getting Started
 * Ensure you have [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed on your system,
   (ideally via [NVM](https://github.com/nvm-sh/nvm), because it's great) Samplayer requires NPM 16 or greater.
 * Navigate to `/Frontend` and run `npm install` and `npm start`. This project does not include a yarn.lock file and 
@@ -21,7 +21,7 @@ playlists. It can also be started with `npm install` followed by `npm start`.
 This project deploys with basic Azure-template GitHub Actions to a [static host](https://purple-sand-0aaf61b0f.1.azurestaticapps.net/)
 on each commit.
 
-##Features
+## Features
 
 ### Complete
 * As a user, I can search for an Artist, Song ~~or Playlist~~ and it will appear in a list of results
