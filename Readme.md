@@ -6,7 +6,7 @@ Samplayer is an example project using [React.js](https://reactjs.org/) and a pla
 [iTunes Store API](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api) 
 and play 30 second audio samples available free.
 
-This project was timeboxed to about ~7 hours total work from `git init` onward.
+This project was timeboxed to about ~9 hours total work from `git init` onward.
 
 ## Getting Started
 * Ensure you have [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed on your system,
