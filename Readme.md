@@ -79,7 +79,14 @@ See [package.json](/API/package.json) for version details
 
 See [package.json](/API/package.json) for version details and minor libraries.
 
-## Defects
-
-
 ## Future Designs
+
+* I would save search terms to a query string, so the search is saved in URL state and can be sent to other people by URL.
+* For a project I would expect to grow rapidly with multiple contributors, I'd use Typescript instead.
+* For a real-world project, I would use Jest for test coverage of core UI features, and particularly both backend and 
+frontend tests in order of (top) priorities on core functionality, authentication, and authorization.
+* For a data persistence layer at a real scale, you'd want a hard REST-or-similar standard, e.g. JSON:API or GraphQL.
+This lets you maintain predictable standard as an API grows, and the predictability lets your backend be basically opaque
+to your frontend when needed, avoiding leaking complexity to frontend devs.
+* I would personally stick the API on top of an ORM that works well with either SQL Server or Postgres, because ORMs are
+a colossal labor saver when you are actually able to design around their constraints from the beginning.

@@ -6,6 +6,8 @@ import reportWebVitals   from './reportWebVitals';
 import { BrowserRouter }                    from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
+// Note this is unused, but would be the idiomatic way to retrieve things like playlists / albums on loading a component
+// that renders their details on load.
 const queryClient = new QueryClient()
 
 ReactDOM.render(

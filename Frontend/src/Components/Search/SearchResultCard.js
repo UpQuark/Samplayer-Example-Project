@@ -44,6 +44,7 @@ import * as Icons                     from 'react-feather'
  *  trackViewUrl: "https://music.apple.com/us/album/bank-heist-street-string-rap-beat-mix/1471564310?i=1471565453&uo=4"
  *  wrapperType: "track"
  * }
+ * Note: This is a good example of where a Typescript object definition like "iTunesApiResponse" would be useful.
  * @returns {JSX.Element}
  * @constructor
  */
