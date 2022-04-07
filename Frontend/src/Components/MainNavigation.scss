@@ -1,19 +1,31 @@
+@import 'bootstrap';
+
 .main-navigation {
   box-shadow: 0 5px 5px #ddd;
   position: fixed;
   width: 100%;
   z-index: 1000;
 
-  a {
-    color: black;
-    margin-left: 6px;
-    margin-right: 6px;
-    text-decoration: none;
+  .nav-item {
+    a {
+      color: $dark;
+      margin-left: 6px;
+      margin-right: 6px;
+      text-decoration: none;
 
-    &.active {
-      font-weight: 500;
-      color: dimgrey;
+      &.active {
+        font-weight: 500;
+        color: dimgrey;
+      }
+
+      &:hover {
+        color: $primary;
+      }
     }
+
+
   }
+
+
 }
 
