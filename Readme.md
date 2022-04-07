@@ -10,7 +10,7 @@ This project was timeboxed to about ~7 hours total work from `git init` onward.
 
 ## Getting Started
 * Ensure you have [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed on your system,
-  (ideally via [NVM](https://github.com/nvm-sh/nvm), because it's great) Samplayer requires NPM 16 or greater.
+  (ideally via [NVM](https://github.com/nvm-sh/nvm), because it's great). Samplayer requires NPM 16 or greater.
 * Navigate to `/Frontend` and run `npm install` and `npm start`. This project does not include a yarn.lock file and 
 so your mileage with Yarn may vary.
 
