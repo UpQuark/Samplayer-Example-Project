@@ -23,22 +23,22 @@ playlists. It can also be started with `npm install` followed by `npm start`.
 * As a user, I can search for an Artist, Song ~~or Playlist~~ and it will appear in a list of results
 * As a user, I can play a song from the results list
 
-![Music Player at desktop resolution](Frontend/public/examples/MusicDesktop.png | width=400)
-![Home at desktop resolution](Frontend/public/examples/MusicMobile.png | width=400)
+![Music Player at desktop resolution](Frontend/public/examples/MusicDesktop.png)
+![Home at desktop resolution](Frontend/public/examples/MusicMobile.png)
 
 ### Incomplete
 * As a user, I can create and save a playlist
 * As a user, I can add and remove pieces from the playlist
 * As a user, I can play a piece of music from the playlist
 
-##Core Libraries Used
+## Core Libraries Used
 
-###Server
+### Server
 * [Express.js](https://expressjs.com/) 4
 
 See [package.json](/API/package.json) for version details
 
-###Frontend
+### Frontend
 * [React.js](https://reactjs.org/) 17 using the base [Create-React-App](https://create-react-app.dev/) template
 * [React Router 6](https://reactrouter.com/docs/en/v6/getting-started/overview)
 * [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) 
@@ -51,6 +51,6 @@ See [package.json](/API/package.json) for version details
 
 See [package.json](/API/package.json) for version details and minor libraries.
 
-##Defects
+## Defects
 
-##Future Designs
+## Future Designs
