@@ -17,6 +17,10 @@ so your mileage with Yarn may vary.
 The API at `/API` is not used by the Frontend and just exists as a basic example of a mocked data store one could use to persist 
 playlists. It can also be started with `npm install` followed by `npm start`.
 
+## Continuous Deployment
+This project deploys with basic Azure-template GitHub Actions to a [static host](https://purple-sand-0aaf61b0f.1.azurestaticapps.net/)
+on each commit.
+
 ##Features
 
 ### Complete
@@ -68,14 +72,15 @@ See [package.json](/API/package.json) for version details
 
 ### Frontend
 * [React.js](https://reactjs.org/) 17 using the base [Create-React-App](https://create-react-app.dev/) template
-* [React Router 6](https://reactrouter.com/docs/en/v6/getting-started/overview)
+* [React Router 6](https://reactrouter.com/docs/en/v6/getting-started/overview) - For having components correspond with URLs.
 * [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) 
   with 
-  [React-Bootstrap 2](https://react-bootstrap.github.io/)
-* [React Debounce Input](https://www.npmjs.com/package/react-debounce-input)
-* [React Feather](https://www.npmjs.com/package/react-feather) for open-source [Feather Icons](https://feathericons.com/)
-* [React H5 Audio Player](https://www.npmjs.com/package/react-h5-audio-player)
-* [SASS](https://www.npmjs.com/package/sass)
+  [React-Bootstrap 2](https://react-bootstrap.github.io/) - Gigantically effort-saving components and styling.
+* [React Debounce Input](https://www.npmjs.com/package/react-debounce-input) - For preventing search events on every keystroke in the searchbar.
+* [React Feather](https://www.npmjs.com/package/react-feather) - for open-source [Feather Icons](https://feathericons.com/)
+* [React H5 Audio Player](https://www.npmjs.com/package/react-h5-audio-player) - Audio player for iTunes snippets
+* [SASS](https://www.npmjs.com/package/sass) - Better CSS
+* [React Query](https://react-query.tanstack.com/) - unused, but my choice for asynchronous data-fetching were Playlists implemented.
 
 See [package.json](/API/package.json) for version details and minor libraries.
 
